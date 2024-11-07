@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap');
-
+/* Reset and global styles */
 * {
   margin: 0;
   padding: 0;
@@ -15,88 +14,142 @@ body {
   color: #252525;
   font-weight: 400;
   background-color: antiquewhite;
-  border-bottom: 1.6rem solid #e9a9db;
   min-height: 100vh;
   padding: 3.2rem;
   padding-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Container for main content */
 .container {
   max-width: 80rem;
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4.8rem;
 }
 
-/* *************** */
-
+/* ********** Header Styles ********** */
 .header {
-  align-self: stretch;
   text-align: center;
-  padding: 20px;
+  margin-bottom: 2.4rem;
 }
 
 .header h1 {
-  /* Non-accessible color */
+  font-size: 4.8rem;
   color: #e9a9db;
-  /* color: #af8602; */
-
   text-transform: uppercase;
-  text-align: center;
-  font-size: 5.2rem;
-  font-weight: 300;
-  letter-spacing: 3px;
-  position: relative;
-  width: 100%;
-  display: block;
-  padding: 20px
+  letter-spacing: 2px;
+  margin-bottom: 0.8rem;
 }
 
-
 .header h2 {
-  display: inline-block;
-  padding: 1rem 0;
-  border-top: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  font-size: 2.4rem;
+  font-size: 3rem;
+  color: #252525;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 500;
+  margin-bottom: 0.4rem;
 }
 
 .header h3 {
-  padding: 20px;
-  
+  font-size: 1.8rem;
+  color: #555;
 }
 
+/* ********** Menu (Pizza Cards) ********** */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
 
-/* *************** */
+.pizza {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  width: calc(50% - 2rem); /* Two cards per row with gap */
+  max-width: 30rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
 
+.pizza:hover {
+  transform: scale(1.05);
+}
 
+.pizza img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1.6rem;
+  object-fit: cover;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.pizza h2 {
+  font-size: 2.4rem;
+  color: #252525;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+
+.pizza p {
+  font-size: 1.4rem;
+  color: #555;
+  margin: 0.8rem 0;
+}
+
+.pizza p:last-of-type {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #e9a9db;
+}
+
+/* Responsive design for pizza cards on smaller screens */
+@media (max-width: 800px) {
+  .pizza {
+    width: 100%; /* Stacks cards on small screens */
+  }
+}
+
+/* ********** Footer Styles ********** */
+.footer {
+  font-size: 1.6rem;
+  color: #555;
+  text-align: center;
+  margin-top: 2.4rem;
+  padding: 1.6rem;
+  background-color: #f7f7f7;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  max-width: 80rem;
+}
+
+/* ********** Button Styles ********** */
 .btn {
-  color: inherit;
+  color: #fff;
   font-family: inherit;
   border: none;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 500;
   background-color: #e9a9db;
-  padding: 1.4rem 3.2rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background-color 0.2s;
+  margin-top: 1.6rem;
 }
 
 .btn:hover {
   background-color: #e9bb24;
 }
-
-/*
-SPACING SYSTEM (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128
-
-FONT SIZE SYSTEM (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /52 / 62 / 74 / 86 / 98
-*/
