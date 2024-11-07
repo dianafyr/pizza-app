@@ -110,7 +110,7 @@ function Footer() {
     
 };
 
-function Button({text, onClick, color = 'white', size='medium'}){
+function Button(){
     const handleClick = () => {
         alert("Redirecting you to order page...")
     };
