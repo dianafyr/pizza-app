@@ -73,7 +73,7 @@ function Pizza ({name, picture, ingredients, price, soldOut}) {
 
 function Menu() {
     return (
-        <div className="pizza-list">
+        <div className="menu">
             {pizzaData.map((pizza, index) => (
                 <Pizza
                     key={index}
